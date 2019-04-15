@@ -2,10 +2,8 @@
 
 struct Weapons
 {
-	bool martialRange;
-	bool martialMelee;
-	bool simpleRange;
-	bool simpleMelee;
+	bool martialSimple;
+	bool rangeMelee;
 	int cost;
 	int weight;
 	string damage;
