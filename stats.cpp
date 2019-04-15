@@ -14,3 +14,40 @@ int stats :: findModifier(int stat){
 		mod=0;
 	return mod;	
 }
+//rolls up a set of stats
+vector <int> stats :: roll_stats(){
+	//A vector to hold all the stats
+	vector <int> stats;
+	//calls the fourdicedroplowest method 6 times, representing rolling 6 stats. the push_back is just adding an element at the end of the vector.
+	stats.push_back(four_dice_drop_low());
+	stats.push_back(four_dice_drop_low()); 
+	stats.push_back(four_dice_drop_low());
+	stats.push_back(four_dice_drop_low()); 
+	stats.push_back(four_dice_drop_low());
+	stats.push_back(four_dice_drop_low()); 
+	return stats;	
+}
+//this method rolls four six-sided dice and ignores the lowest one. Then it adds them all together to get a stat from 3-18
+int stats :: four_dice_drop_low(){
+	int stat;
+	//we'll need 4 dice, so here's an array of size 4.
+	int dice[4];
+	//because c++ RNG is terrible, we'll base the seed off the time. 
+	srand(time(NULL));
+	//the %6 restricts the range to 6, the +1 starts it at 1.
+	dice[0]=rand()%6+1;
+	dice[1]=rand()%6+1;
+	dice[2]=rand()%6+1;
+	dice[3]=rand()%6+1;
+	//put the lowest value in the array at index 0
+	int min=0;
+	for(int i=1; i<3; i++){
+		if(dice[i]<dice[min]){
+			int temp=dice[0];
+			dice[0]=dice[i];
+			dice[i]=temp;
+		}
+	}
+	stat=dice[1]+dice[2]+dice[3];
+	return stat;
+}
