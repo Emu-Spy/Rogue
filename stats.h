@@ -4,7 +4,7 @@ using namespace std;
 class Stats
 {
 	private:
-		int values[6];
+		vector <int> values[6];
 		int mods[6];
 	
 	public:
@@ -13,4 +13,6 @@ class Stats
 		void print();
 		void changeStat();
 		void findModifier();
+		vector <int> roll_stats();
+		int four_dice_drop_low();
 };
