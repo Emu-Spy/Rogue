@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "stats.cpp"
 using namespace std;
 class Rogue{
 	private:
@@ -14,13 +15,6 @@ class Rogue{
 		int initiative;
 		int hp_max;
 		int current_hp;
-		vector <int> stats;
-		int intel;
-		int cha;
-		int dex;
-		int con;
-		int wis;
-		int str;
 		int intel_save;
 		int cha_save;
 		int dex_save;
