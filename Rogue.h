@@ -43,6 +43,5 @@ class Rogue{
 		Rogue();
 		vector <int> roll_stats();
 		int four_dice_drop_low();
-		int find_modifier(int stat);
 		//TODO: print method
 };
