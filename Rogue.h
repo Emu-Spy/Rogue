@@ -43,5 +43,5 @@ class Rogue{
 		Rogue();
 		vector <int> roll_stats();
 		int four_dice_drop_low();
-		//TODO: print method
+		void print();
 };
