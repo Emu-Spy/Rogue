@@ -10,4 +10,5 @@ class Stats
 	public:
 		void print();
 		void changeStat();
+		void findModifier();
 };
