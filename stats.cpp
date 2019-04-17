@@ -25,7 +25,7 @@ int * Stats :: roll_stats(){
 	stats[0]=four_dice_drop_low();
 	stats[1]=four_dice_drop_low(); 
 	stats[2]=four_dice_drop_low();
-	stats[3]=(four_dice_drop_low(); 
+	stats[3]=four_dice_drop_low(); 
 	stats[4]=four_dice_drop_low();
 	stats[5]=four_dice_drop_low(); 
 	return stats;	
