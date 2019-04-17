@@ -21,15 +21,6 @@ Rogue :: Rogue(){
 	description="";
 	//this is a rogue's sneak attack at level 1, it changes with experience
 	sneak_attack="1d6";
-	//assigning the stats array to 6 random stats and assigning the individual stats to values in the vector
-	stats=roll_stats();
-	intel=stats[0];
-	cha=stats[1];
-	//an elf (which this default rogue is) gets +2 to dexterity.
-	dex=stats[2]+2;
-	con=stats[3];
-	wis=stats[4];
-	str=stats[5];
 	//initial HP is constitution modifier plus 8
 	hp_max=find_modifier(con)+8;
 	current_hp=hp_max;
@@ -66,12 +57,12 @@ Rogue :: Rogue(){
 	languages.push_back("Common");
 	languages.push_back("Elvish");
 	//assigning saving throws, there's proficiency on dexterity and intelligence so add the proficiency bonus to those
-	intel_save=find_modifier(intel)_proficiency_bonus;
+	intel_save=find_modifier(intel)+proficiency_bonus;
 	cha_save=find_modifier(cha);
 	dex_save=find_modifier(dex)+proficiency_bonus;
 	con_save=find_modifier(con);
 	wis_save=find_modifier(wis);
 	str_save=find_modifier(str);
 }
-/
+
 
