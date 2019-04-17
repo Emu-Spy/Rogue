@@ -7,7 +7,5 @@ struct Weapons
 	int cost;
 	int weight;
 	string damage;
-	
-	
-	
+
 };
