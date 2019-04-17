@@ -2,8 +2,11 @@
 #include "stats.h"
 using namespace std;
 
+Stats :: Stats(){
+	roll_stats();
+}
 //uses a formula to find modifiers for ability scores
-int stats :: findModifier(int stat){
+int Stats :: findModifier(int stat){
 	int mod;
 	//the modifier increases by 1 for every 2 over 10 and decreases by 1 for every 2 under 11. For 10 and 11 it is 0.
 	if(stat>11)
@@ -15,7 +18,7 @@ int stats :: findModifier(int stat){
 	return mod;	
 }
 //rolls up a set of stats
-vector <int> stats :: roll_stats(){
+vector <int> Stats :: roll_stats(){
 	//A vector to hold all the stats
 	vector <int> stats;
 	//calls the fourdicedroplowest method 6 times, representing rolling 6 stats. the push_back is just adding an element at the end of the vector.
@@ -28,7 +31,7 @@ vector <int> stats :: roll_stats(){
 	return stats;	
 }
 //this method rolls four six-sided dice and ignores the lowest one. Then it adds them all together to get a stat from 3-18
-int stats :: four_dice_drop_low(){
+int Stats :: four_dice_drop_low(){
 	int stat;
 	//we'll need 4 dice, so here's an array of size 4.
 	int dice[4];
