@@ -3,7 +3,8 @@
 using namespace std;
 
 Stats :: Stats(){
-	roll_stats();
+	int *p;
+	p=roll_stats();
 }
 //uses a formula to find modifiers for ability scores
 int Stats :: findModifier(int stat){
@@ -18,16 +19,15 @@ int Stats :: findModifier(int stat){
 	return mod;	
 }
 //rolls up a set of stats
-vector <int> Stats :: roll_stats(){
-	//A vector to hold all the stats
-	vector <int> stats;
-	//calls the fourdicedroplowest method 6 times, representing rolling 6 stats. the push_back is just adding an element at the end of the vector.
-	stats.push_back(four_dice_drop_low());
-	stats.push_back(four_dice_drop_low()); 
-	stats.push_back(four_dice_drop_low());
-	stats.push_back(four_dice_drop_low()); 
-	stats.push_back(four_dice_drop_low());
-	stats.push_back(four_dice_drop_low()); 
+int * Stats :: roll_stats(){
+	static int stats[6];
+	//calls the fourdicedroplowest method 6 times, representing rolling 6 stats.
+	stats[0]=four_dice_drop_low();
+	stats[1]=four_dice_drop_low(); 
+	stats[2]=four_dice_drop_low();
+	stats[3]=(four_dice_drop_low(); 
+	stats[4]=four_dice_drop_low();
+	stats[5]=four_dice_drop_low(); 
 	return stats;	
 }
 //this method rolls four six-sided dice and ignores the lowest one. Then it adds them all together to get a stat from 3-18
