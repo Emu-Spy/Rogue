@@ -13,7 +13,7 @@ class Stats
 		Stats();
 		Stats(int p_values[]);
 		void print();
-		void changeStat();
+		void changeStat(int stat);
 		void findModifier();
 		int * roll_stats();
 		int four_dice_drop_low();
