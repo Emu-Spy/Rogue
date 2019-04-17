@@ -54,3 +54,11 @@ int Stats :: four_dice_drop_low(){
 	stat=dice[1]+dice[2]+dice[3];
 	return stat;
 }
+
+void Stats :: print ()
+{
+	for (int i = 0; i < 6; i++)
+	{
+		cout<< values[i];
+	}
+}
