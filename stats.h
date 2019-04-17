@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
-
+//these two are included for random number generation
+#include <stdlib.h>
+#include <time.h>
 class Stats
 {
 	private:
