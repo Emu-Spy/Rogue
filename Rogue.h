@@ -3,6 +3,7 @@
 #include <vector>
 #include "stats.cpp"
 using namespace std;
+
 class Rogue{
 	private:
 		int level;
@@ -41,7 +42,6 @@ class Rogue{
 		int skills[18];
 	public:
 		Rogue();
-		vector <int> roll_stats();
-		int four_dice_drop_low();
+		int find_modifier(int stat);
 		void print();
 };
