@@ -1,3 +1,2 @@
 # Rogue
-Good job you can read
-Now go away.
+School project. I suggest you pay no mind.
