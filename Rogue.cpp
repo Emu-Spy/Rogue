@@ -26,26 +26,26 @@ Rogue :: Rogue(){
 	current_hp=hp_max;
 	hit_dice="1d8";
 	//perception is wisdom modifier plus 10
-	perception=find_modifier(wis)+10;
+	perception=find_modifier(values[4])+10;
 	equipment.push_back("Burglar's pack");
 	equipment.push_back("Thieves' tools");
 	armor="leather";
 	shield=false;
 	//the armor class is the dexterity modifier plus the armor's AC (in this case, leather=11)
-	ac=find_modifier(dex)+11;
+	ac=find_modifier(values[1])+11;
 	//assigning skills
-	skills[0]=find_modifier(str);
+	skills[0]=find_modifier(values[0]);
 	for(int i=1; i<4; i++){
-		skills[i]=find_modifier(dex);
+		skills[i]=find_modifier(values[1]);
 	}
 	for(int j=4; j<9; j++){
-		skills[j]=find_modifier(intel);
+		skills[j]=find_modifier(values[3]);
 	}
 	for(int k=9; k<14; k++){
-		skills[k]=find_modifier(wis);
+		skills[k]=find_modifier(values[4]);
 	}
 	for(int l=14; l<18; l++){
-		skills[l]=find_modifier(cha);
+		skills[l]=find_modifier(values[5]);
 	}
 	//there's proficiency in Acrobatics, Athletics, Intimidation, and Investigation (due to Rogue) and Perception (due to Elf), so add the proficiency bonus to those.
 	skills[0]+=proficiency_bonus;
