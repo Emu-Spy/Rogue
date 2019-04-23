@@ -56,13 +56,6 @@ Rogue :: Rogue(){
 	//assign nothing to feats right now, there won't be any at level 1 unless you're variant human
 	languages.push_back("Common");
 	languages.push_back("Elvish");
-	//assigning saving throws, there's proficiency on dexterity and intelligence so add the proficiency bonus to those
-	intel_save=find_modifier(16)+proficiency_bonus;
-	cha_save=find_modifier(11);
-	dex_save=find_modifier(9)+proficiency_bonus;
-	con_save=find_modifier(12);
-	wis_save=find_modifier(7);
-	str_save=find_modifier(13);
 }
 
 //uses a formula to find modifiers for ability scores
