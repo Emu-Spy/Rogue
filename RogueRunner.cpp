@@ -10,8 +10,17 @@ int main()
 	cout<< "You can add a total of 27 points to your stats." << endl;
 	cout<< "How many points would you like in each of the following stats:" << endl;
 	cout<< "Strength: ";
-	cin<< //var
-	
+	cin<< //var;
+	cout<< "\nDexterity: ";
+	cin<< //var;
+	cout<< "\nConstitution: ";
+	cin<< //var;
+	cout<< "\nIntellignece: ";
+	cin<< //var;
+	cout<< "\nWisdom: ";
+	cin<< //var;
+	cout<< "\nCharisma: ";
+	cin<< //var;
 	
 	
 	return 0;
