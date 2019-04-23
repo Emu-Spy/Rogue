@@ -13,6 +13,7 @@ Stats :: Stats(){
 int Stats :: findModifier(int stat){
 	return mods[stat-1];
 }
+
 void Stats :: print ()
 {
 	cout << "Strength: " << values[0] << ", Mod: " << mods[0] << endl;
