@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Rogue.cpp"
 using namespace std;
 
 int main()
@@ -21,17 +22,17 @@ int main()
 	cout<< "How many points would you like in each of the following stats:" << endl;
 	
 	cout<< "Strength: ";
-	cin>> str;
+	cin>> values[0];
 	cout<< "\nDexterity: ";
-	cin>> dex;
+	cin>> values[1];
 	cout<< "\nConstitution: ";
-	cin>> con;
+	cin>> values[2];
 	cout<< "\nIntellignece: ";
-	cin>> intel;
+	cin>> values[3];
 	cout<< "\nWisdom: ";
-	cin>> wis;
+	cin>> values[4];
 	cout<< "\nCharisma: ";
-	cin>> cha;
+	cin>> values[5];
 	
 	
 	
