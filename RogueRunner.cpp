@@ -21,17 +21,17 @@ int main()
 	cout<< "How many points would you like in each of the following stats:" << endl;
 	
 	cout<< "Strength: ";
-	cin>> //var;
+	cin>> str;
 	cout<< "\nDexterity: ";
-	cin>> //var;
+	cin>> dex;
 	cout<< "\nConstitution: ";
-	cin>> //var;
+	cin>> con;
 	cout<< "\nIntellignece: ";
-	cin>> //var;
+	cin>> intel;
 	cout<< "\nWisdom: ";
-	cin>> //var;
+	cin>> wis;
 	cout<< "\nCharisma: ";
-	cin>> //var;
+	cin>> cha;
 	
 	
 	
