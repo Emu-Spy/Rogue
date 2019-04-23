@@ -13,31 +13,6 @@ Stats :: Stats(){
 int Stats :: findModifier(int stat){
 	return mods[stat-1];
 }
-//this method rolls four six-sided dice and ignores the lowest one. Then it adds them all together to get a stat from 3-18
-int Stats :: four_dice_drop_low(){
-	int stat;
-	//we'll need 4 dice, so here's an array of size 4.
-	int dice[4];
-	//because c++ RNG is terrible, we'll base the seed off the time. 
-	srand(time(NULL));
-	//the %6 restricts the range to 6, the +1 starts it at 1.
-	dice[0]=rand()%6+1;
-	dice[1]=rand()%6+1;
-	dice[2]=rand()%6+1;
-	dice[3]=rand()%6+1;
-	//put the lowest value in the array at index 0
-	int min=0;
-	for(int i=1; i<3; i++){
-		if(dice[i]<dice[min]){
-			int temp=dice[0];
-			dice[0]=dice[i];
-			dice[i]=temp;
-		}
-	}
-	stat=dice[1]+dice[2]+dice[3];
-	return stat;
-}
-
 void Stats :: print ()
 {
 	cout << "Strength: " << values[0] << ", Mod: " << mods[0] << endl;
