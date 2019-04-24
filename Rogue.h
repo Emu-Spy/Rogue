@@ -6,7 +6,6 @@ using namespace std;
 class Rogue{
 	private:
 		int level;
-		int spent_points;
 		int xp;
 		int speed;
 		string race;
@@ -27,7 +26,6 @@ class Rogue{
 		string player_name;
 		vector <string> equipment;
 		//TODO: implement weapons.
-		string description;
 		string sneak_attack;
 		vector <string> feats;
 		vector <string> languages;
@@ -37,4 +35,7 @@ class Rogue{
 	public:
 		Rogue();
 		void print();
+		void changeRace(string racial);
+		void changeAlignment(string align);
+		void changeSkills(int index, int change)
 };

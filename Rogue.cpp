@@ -20,7 +20,6 @@ Rogue :: Rogue(){
 	inspiration=0;
 	name="Rogueus Genericus";
 	player_name="Wren";
-	description="";
 	//this is a rogue's sneak attack at level 1, it changes with experience
 	sneak_attack="1d6";
 	//initial HP is constitution modifier plus 8
