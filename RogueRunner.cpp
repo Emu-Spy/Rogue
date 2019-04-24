@@ -6,6 +6,7 @@ int main()
 {
 	int spent_points;
 	Rogue r;
+	//with this we have 2 Stats objects. A fix for this is in progress.
 	Stats s;
 	cout<< "Welcome to your guide through making a Rogue class DnD cahracter.";
 	cout<< "Here you will be able to set your characters ability scores, weaponry, age, and race." << endl;
@@ -19,7 +20,7 @@ int main()
 	
 	//print out default stats (8 in all stats)
 	
-	cout<< "You can add a total of 27 points to your stats, eith a max of 9 in each one." << endl;
+	cout<< "You can add a total of 27 points to your stats, with a max of 9 in each one." << endl;
 	
 	cout<< "How many points would you like in each of the following stats:" << endl;
 	

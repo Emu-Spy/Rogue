@@ -13,8 +13,7 @@ class Rogue{
 		int age;
 		int ac;
 		int initiative;
-		int hp_max;
-		int current_hp;
+		int hp;
 		int perception;
 		int death_success;
 		string hit_dice;
@@ -27,7 +26,6 @@ class Rogue{
 		vector <string> equipment;
 		//TODO: implement weapons.
 		string sneak_attack;
-		vector <string> feats;
 		vector <string> languages;
 		string armor;
 		bool shield;
@@ -37,5 +35,6 @@ class Rogue{
 		void print();
 		void changeRace(string racial);
 		void changeAlignment(string align);
-		void changeSkills(int index, int change);
+		void addLanguage(string lang);
+		string getRace();
 };
