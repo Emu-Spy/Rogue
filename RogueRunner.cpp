@@ -1,5 +1,5 @@
+#include "Rogue.h"
 #include <iostream>
-#include "Rogue.cpp"
 using namespace std;
 
 int main()
@@ -17,22 +17,28 @@ int main()
 	
 	//print out default stats (8 in all stats)
 	
-	cout<< "You can add a total of 27 points to your stats." << endl;
+	cout<< "You can add a total of 27 points to your stats, eith a max of 9 in each one." << endl;
 	
 	cout<< "How many points would you like in each of the following stats:" << endl;
 	
-	cout<< "Strength: ";
-	cin>> values[0];
-	cout<< "\nDexterity: ";
-	cin>> values[1];
-	cout<< "\nConstitution: ";
-	cin>> values[2];
-	cout<< "\nIntellignece: ";
-	cin>> values[3];
-	cout<< "\nWisdom: ";
-	cin>> values[4];
-	cout<< "\nCharisma: ";
-	cin>> values[5];
+	cout<< "Strength: "<<endl;
+	cin>> spent_points;
+	s.pointBuy(0, spent_points);
+	cout<< "Dexterity: "<<endl;
+	cin>> spent_points;
+	s.pointBuy(1, spent_points);
+	cout<< "Constitution: "<<endl;
+	cin>> spent_points;
+	s.pointBuy(2, spent_points);
+	cout<< "Intellignece: "<<endl;
+	cin>> spent_points;
+	s.pointBuy(3, spent_points);
+	cout<< "Wisdom: "<<endl;
+	cin>> spent_points;
+	s.pointBuy(4, spent_points);
+	cout<< "Charisma: "<<endl;
+	cin>> spent_points;
+	s.pointBuy(5, spent_points);
 	
 	
 	
