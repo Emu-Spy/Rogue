@@ -1,5 +1,5 @@
 #include "Rogue.h"
-#include "Stats.cpp"
+#include "stats.cpp"
 using namespace std;
 
 Rogue :: Rogue(){

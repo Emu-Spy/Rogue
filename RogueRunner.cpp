@@ -1,10 +1,12 @@
-#include "Rogue.h"
+#include "Rogue.cpp"
 #include <iostream>
 using namespace std;
 
 int main()
 {
 	int spent_points;
+	Rogue r;
+	Stats s;
 	cout<< "Welcome to your guide through making a Rogue class DnD cahracter.";
 	cout<< "Here you will be able to set your characters ability scores, weaponry, age, and race." << endl;
 	

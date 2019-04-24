@@ -37,5 +37,5 @@ class Rogue{
 		void print();
 		void changeRace(string racial);
 		void changeAlignment(string align);
-		void changeSkills(int index, int change)
+		void changeSkills(int index, int change);
 };
