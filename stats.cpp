@@ -3,34 +3,68 @@
 using namespace std;
 
 Stats :: Stats(){
-	for(int i = 0; i < 6; i++)
-	{
-		values[i] = 0;
-		mods[i] = 0;
+	for(int i=0;i<6;i++){
+		mods[i]=-1;
+		values[i]=8;
+		points=27;
 	}
 }
-
-int Stats :: findModifier(int stat){
-	return mods[stat-1];
-}
-
-void Stats :: print ()
-{
-	cout << "Strength: " << values[0] << ", Mod: " << mods[0] << endl;
-	cout << "Dexterity: " << values[1] << ", Mod: " << mods[1] << endl;
-	cout << "Constitution: " << values[2] << ", Mod: " << mods[2] << endl;
-	cout << "Intelligence: " << values[3] << ", Mod: " << mods[3] << endl;
-	cout << "Wisdom: " << values[4] << ", Mod: " << mods[4] << endl;
-	cout << "Charisma: " << values[5] << ", Mod: " << mods[5] << endl;
-}
-
-void Stats :: changeStat(int stat, int num)
-{
-	values[stat] = num;
-	if(num>11)
-		mods[stat]=(num-11)/2;
-	else if(num<10)
-		mods[stat]=((11-num)/2)*-1;
+//uses a formula to find modifiers for ability scores
+int Stats :: calcModifier(int stat){
+	int mod;
+	//the modifier increases by 1 for every 2 over 10 and decreases by 1 for every 2 under 11. For 10 and 11 it is 0.
+	if(stat>11)
+		mod=(stat-11)/2;
+	else if(stat<10)
+		mod=((11-stat)/2)*-1;
 	else
-		mods[stat]=0;
+		mod=0;
+	return mod;	
+}
+
+int Stats :: getModifier(int index){
+	return mods[index];
+}
+
+int Stats :: getStat(int index){
+	return values[index];
+}
+
+void Stats :: changeStat(int index, int newStat){
+	values[index]=newStat;
+	mods[index]=calcModifier(newStat);
+}
+
+void Stats :: pointBuy(int index, int pointsSpent){
+	if(pointsSpent=0)
+		//do nothing
+		points-=0;
+	else if(pointsSpent=1){
+		values[index]=9;
+		points-=1;
+	}
+	else if(pointsSpent=2){
+		values[index]=10;
+		points-=2;
+	}
+	else if(pointsSpent=3){
+		values[index]=11;
+		points-=3;	
+	}
+	else if(pointsSpent=4){
+		values[index]=12;
+		points-=4;
+	}
+	else if(pointsSpent=5){
+		values[index]=13;
+		points-=5;
+	}
+	else if(pointsSpent=7){
+		values[index]=14;
+		points-=7;
+	}
+	else if(pointsSpent=9){
+		values[index]=15;
+		points-=9;
+	}
 }
