@@ -13,8 +13,6 @@ class Rogue{
 		int age;
 		int ac;
 		int initiative;
-		int hp;
-		int perception;
 		int death_success;
 		string hit_dice;
 		int death_fail;
@@ -23,18 +21,20 @@ class Rogue{
 		int inspiration;
 		string name;
 		string player_name;
+		//a vector is basically an array with non-static length
 		vector <string> equipment;
 		//TODO: implement weapons.
 		string sneak_attack;
 		vector <string> languages;
 		string armor;
 		bool shield;
-		int skills[18];
 	public:
 		Rogue();
 		void print();
 		void changeRace(string racial);
 		void changeAlignment(string align);
 		void addLanguage(string lang);
+		int getArmorStrength();
 		string getRace();
+		void changeAC(int newac);
 };

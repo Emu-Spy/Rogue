@@ -1,10 +1,8 @@
 #include "Rogue.h"
-#include "stats.cpp"
 using namespace std;
 
 Rogue :: Rogue(){
-	//How to fix the fact that we have 2 Stats objects: write additional methods to calculate hp, perception, and AC. Then move everything involving skills to stats.cpp and implement saving throws there as well.
-	Stats s;
+	//How to fix the fact that we have 2 Stats objects: calculate AC in the runner. 
 	level=0;
 	xp=0;
 	race="Elf";
@@ -23,36 +21,11 @@ Rogue :: Rogue(){
 	player_name="Wren";
 	//this is a rogue's sneak attack at level 1, it changes with experience
 	sneak_attack="1d6";
-	//initial HP is constitution modifier plus 8
-	hp=s.getModifier(2)+8;
 	hit_dice="1d8";
-	//perception is wisdom modifier plus 10
-	perception=s.getModifier(4)+10;
 	equipment.push_back("Burglar's pack");
 	equipment.push_back("Thieves' tools");
 	armor="none";
 	shield=false;
-	//the armor class is the dexterity modifier plus the armor's AC (in this case, leather=11)
-	ac=s.getModifier(1)+11;
-	//assigning skills TODO: move this to stats.cpp
-	skills[0]=s.getModifier(0);
-	for(int i=1; i<4; i++){
-		skills[i]=s.getModifier(1);
-	}
-	for(int j=4; j<9; j++){
-		skills[j]=s.getModifier(3);
-	}
-	for(int k=9; k<14; k++){
-		skills[k]=s.getModifier(4);
-	}
-	for(int l=14; l<18; l++){
-		skills[l]=s.getModifier(5);
-	}
-	//there's proficiency in Acrobatics, Athletics, Intimidation, and Investigation (due to Rogue) and Perception (due to Elf), so add the proficiency bonus to those.
-	skills[0]+=proficiency_bonus;
-	skills[1]+=proficiency_bonus;
-	skills[6]+=proficiency_bonus;
-	skills[14]+=proficiency_bonus;
 	//Every character has Common as a language
 	languages.push_back("Common");
 }
@@ -66,14 +39,19 @@ void Rogue :: changeAlignment(string align){
 void Rogue :: addLanguage(string lang){
 	languages.push_back("lang");
 }
+//this is here so we can add racial bonuses in stats.cpp
 string Rogue :: getRace(){
 	return race;
 }
-//suboptimal implementation, but if it works it works
+//these two are here so we can calculate AC in the runner. This is needed because it involves things from both here and stats.cpp
 int Rogue :: getArmorStrength(){
 	//leather is the only armor a rogue can have on generation
-	if(armor="leather")
+	if(armor=="leather")
 		return 10;
 	else
 		return 0;
 }
+void Rogue :: changeAC(int newac){
+	ac=newac;
+}
+//TODO: print method

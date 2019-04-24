@@ -8,6 +8,12 @@ Stats :: Stats(){
 		values[i]=8;
 		points=27;
 	}
+	//assigning skills TODO: a method for changing these
+	for(int i=0; i<18; i++){
+		skills[i]=-1;
+	}
+	hp=getModifier(2)+8;
+	perception=getModifier(4)+10;
 }
 //uses a formula to find modifiers for ability scores
 int Stats :: calcModifier(int stat){
@@ -34,7 +40,7 @@ void Stats :: changeStat(int index, int newStat){
 	values[index]=newStat;
 	mods[index]=calcModifier(newStat);
 }
-
+//looks a bit ugly, could possibly be improved with a switch case
 void Stats :: pointBuy(int index, int pointsSpent){
 	if(pointsSpent=0)
 		//do nothing
@@ -68,3 +74,21 @@ void Stats :: pointBuy(int index, int pointsSpent){
 		points-=9;
 	}
 }
+
+void Stats :: changeSkills(){
+	//assigning skills. Run this after determining stats.
+	skills[0]=mods[0];
+	for(int i=1; i<4; i++){
+		skills[i]=mods[1];
+	}
+	for(int j=4; j<9; j++){
+		skills[j]=mods[3];
+	}
+	for(int k=9; k<14; k++){
+		skills[k]=mods[4];
+	}
+	for(int l=14; l<18; l++){
+		skills[l]=mods[5];
+	}
+}
+//TODO: racial bonuses

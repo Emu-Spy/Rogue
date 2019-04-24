@@ -1,4 +1,5 @@
 #include "Rogue.cpp"
+#include "stats.cpp"
 #include <iostream>
 using namespace std;
 
@@ -43,8 +44,8 @@ int main()
 	cin>> spent_points;
 	s.pointBuy(5, spent_points);
 	
-	
-	
+	//this is here in the interest of disentagling rogue and stats
+	r.changeAC(r.getArmorStrength()+s.getModifier(1));
 	
 	return 0;
 }
