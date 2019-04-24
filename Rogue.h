@@ -6,6 +6,7 @@ using namespace std;
 class Rogue{
 	private:
 		int level;
+		int spent_points;
 		int xp;
 		int speed;
 		string race;
@@ -35,6 +36,5 @@ class Rogue{
 		int skills[18];
 	public:
 		Rogue();
-		int find_modifier(int stat);
 		void print();
 };
