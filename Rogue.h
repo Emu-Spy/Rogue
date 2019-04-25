@@ -26,7 +26,6 @@ class Rogue{
 		vector <string> equipment;
 		//TODO: implement weapons.
 		string sneak_attack;
-		vector <string> languages;
 		string armor;
 		bool shield;
 	public:
