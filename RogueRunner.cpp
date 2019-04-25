@@ -1,5 +1,5 @@
-#include "Rogue.cpp"
-#include "stats.cpp"
+#include "Rogue.h"
+#include "stats.h"
 #include <iostream>
 using namespace std;
 
@@ -7,9 +7,8 @@ int main()
 {
 	int spent_points;
 	Rogue r;
-	//with this we have 2 Stats objects. A fix for this is in progress.
 	Stats s;
-	cout<< "Welcome to your guide through making a Rogue class DnD cahracter.";
+	cout<< "Welcome to your guide through making a Rogue class DnD character. ";
 	cout<< "Here you will be able to set your characters ability scores, weaponry, age, and race." << endl;
 	
 	
@@ -43,7 +42,9 @@ int main()
 	cout<< "Charisma: "<<endl;
 	cin>> spent_points;
 	s.pointBuy(5, spent_points);
+	s.changeSkills();
 	
+	s.statsPrint();
 	//this is here in the interest of disentagling rogue and stats
 	r.changeAC(r.getArmorStrength()+s.getModifier(1));
 	

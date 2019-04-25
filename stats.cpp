@@ -8,8 +8,7 @@ Stats :: Stats(){
 		values[i]=8;
 		points=27;
 	}
-	//assigning skills TODO: a method for changing these
-	for(int i=0; i<18; i++){
+	for(int i=0; i<24; i++){
 		skills[i]=-1;
 	}
 	hp=getModifier(2)+8;
@@ -20,9 +19,9 @@ int Stats :: calcModifier(int stat){
 	int mod;
 	//the modifier increases by 1 for every 2 over 10 and decreases by 1 for every 2 under 11. For 10 and 11 it is 0.
 	if(stat>11)
-		mod=(stat-11)/2;
+		mod=(stat-10)/2;
 	else if(stat<10)
-		mod=((11-stat)/2)*-1;
+		mod=((10-stat)/2)*-1;
 	else
 		mod=0;
 	return mod;	
@@ -42,35 +41,35 @@ void Stats :: changeStat(int index, int newStat){
 }
 //looks a bit ugly, could possibly be improved with a switch case
 void Stats :: pointBuy(int index, int pointsSpent){
-	if(pointsSpent=0)
+	if(pointsSpent==0)
 		//do nothing
 		points-=0;
-	else if(pointsSpent=1){
-		values[index]=9;
+	else if(pointsSpent==1){
+		changeStat(index,9);
 		points-=1;
 	}
-	else if(pointsSpent=2){
-		values[index]=10;
+	else if(pointsSpent==2){
+		changeStat(index,10);
 		points-=2;
 	}
-	else if(pointsSpent=3){
-		values[index]=11;
+	else if(pointsSpent==3){
+		changeStat(index,11);
 		points-=3;	
 	}
-	else if(pointsSpent=4){
-		values[index]=12;
+	else if(pointsSpent==4){
+		changeStat(index,12);
 		points-=4;
 	}
-	else if(pointsSpent=5){
-		values[index]=13;
+	else if(pointsSpent==5){
+		changeStat(index,13);
 		points-=5;
 	}
-	else if(pointsSpent=7){
-		values[index]=14;
+	else if(pointsSpent==7){
+		changeStat(index,14);
 		points-=7;
 	}
-	else if(pointsSpent=9){
-		values[index]=15;
+	else if(pointsSpent==9){
+		changeStat(index,15);
 		points-=9;
 	}
 }
@@ -90,5 +89,27 @@ void Stats :: changeSkills(){
 	for(int l=14; l<18; l++){
 		skills[l]=mods[5];
 	}
+	skills[18]=mods[0];
+	skills[19]=mods[1];
+	skills[20]=mods[2];
+	skills[21]=mods[3];
+	skills[22]=mods[4];
+	skills[23]=mods[5];
+}
+void Stats :: addProficiency(int skill){
+	skills[skill]+=2;
 }
 //TODO: racial bonuses
+void Stats :: statsPrint(){
+	cout<<"Your stats are:"<<endl;
+	cout<<"Strength is: "<<values[0]<<" with a modifier of: "<<mods[0]<<" and a saving throw of: "<<skills[18]<<endl;
+	cout<<"Dexterity is: "<<values[1]<<" with a modifier of: "<<mods[1]<<" and a saving throw of: "<<skills[19]<<endl;
+	cout<<"Constitution is: "<<values[2]<<" with a modifier of: "<<mods[2]<<" and a saving throw of: "<<skills[20]<<endl;
+	cout<<"Intelligence is: "<<values[3]<<" with a modifier of: "<<mods[3]<<" and a saving throw of: "<<skills[21]<<endl;
+	cout<<"Wisdom is: "<<values[4]<<" with a modifier of: "<<mods[4]<<" and a saving throw of: "<<skills[22]<<endl;
+	cout<<"Charisma is: "<<values[5]<<" with a modifier of: "<<mods[5]<<" and a saving throw of: "<<skills[23]<<endl;
+	cout<<"Here are your skills, listed from top on the character sheet to bottom"<<endl;
+	for(int i=0;i<18;i++){
+		cout<<skills[i]<<endl;
+	}
+}
