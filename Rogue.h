@@ -5,6 +5,7 @@ using namespace std;
 
 class Rogue{
 	private:
+		Stats s;
 		int level;
 		int xp;
 		int speed;
