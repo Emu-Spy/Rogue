@@ -36,7 +36,9 @@ class Rogue{
 		void changeAlignment(string align);
 		int getArmorStrength();
 		void changeAC(int newac);
-		//these methods just call a method in stats. There may be a better solution.
 		void pointBuy(int index, int pointsSpent);
 		void changeSkills();
+		void changeName(string newname);
+		void addEquipment(string newEquip);
+		void changeAge(int newAge);
 };

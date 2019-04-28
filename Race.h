@@ -18,6 +18,7 @@ class Race
 		Race();
 		Race(string p_race);
 		void racePrint();
+		//TODO: code these methods and then use them in rogue.cpp
 		int* returnBonuses();
 		int* returnProficiencies();
 };

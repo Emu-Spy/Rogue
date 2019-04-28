@@ -7,7 +7,7 @@ Rogue :: Rogue(){
 	level=0;
 	xp=0;
 	alignment="Chaotic Neutral";
-	age=122;
+	age=45;
 	initiative=0;
 	death_success=0;
 	death_fail=0;
@@ -20,9 +20,11 @@ Rogue :: Rogue(){
 	//this is a rogue's sneak attack at level 1, it changes with experience
 	sneak_attack="1d6";
 	hit_dice="1d8";
-	equipment.push_back("Burglar's pack");
-	equipment.push_back("Thieves' tools");
 	armor="no";
+	equipment.push_back("dagger");
+	equipment.push_back("dagger");
+	equipment.push_back("theives' tools");
+	armor="leather";
 	shield=false;
 }
 
@@ -68,4 +70,13 @@ void Rogue :: roguePrint(){
 		cout<<"a shield."<<endl;
 	else
 		cout<<"no shield."<<endl;
+}
+void Rogue :: changeName(string newname){
+	name=newname;
+}
+void Rogue :: addEquipment(string newEquip){
+	equipment.push_back(newEquip);
+}
+void Rogue :: changeAge(int newAge){
+	age=newAge;
 }
