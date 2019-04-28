@@ -1,4 +1,3 @@
-//Names: Logan Parker, Jacob Hoch, Erika Lebron, Skyler Huckabee-Jennings, Ashanti Lomas-Ortega
 #include <iostream>
 #include <string>
 #include <vector>
