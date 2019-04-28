@@ -1,5 +1,4 @@
 #include "Rogue.h"
-#include "stats.h"
 #include <iostream>
 using namespace std;
 
@@ -7,9 +6,8 @@ int main()
 {
 	int spent_points;
 	Rogue r;
-	Stats s;
 	cout<< "Welcome to your guide through making a Rogue class DnD character. ";
-	cout<< "Here you will be able to set your characters ability scores, weaponry, age, and race." << endl;
+	cout<< "Here you will be able to set your character's ability scores, weaponry, age, and race." << endl;
 	
 	
 	
@@ -26,27 +24,27 @@ int main()
 	
 	cout<< "Strength: "<<endl;
 	cin>> spent_points;
-	s.pointBuy(0, spent_points);
+	r.pointBuy(0, spent_points);
 	cout<< "Dexterity: "<<endl;
 	cin>> spent_points;
-	s.pointBuy(1, spent_points);
+	r.pointBuy(1, spent_points);
 	cout<< "Constitution: "<<endl;
 	cin>> spent_points;
-	s.pointBuy(2, spent_points);
+	r.pointBuy(2, spent_points);
 	cout<< "Intellignece: "<<endl;
 	cin>> spent_points;
-	s.pointBuy(3, spent_points);
+	r.pointBuy(3, spent_points);
 	cout<< "Wisdom: "<<endl;
 	cin>> spent_points;
-	s.pointBuy(4, spent_points);
+	r.pointBuy(4, spent_points);
 	cout<< "Charisma: "<<endl;
 	cin>> spent_points;
-	s.pointBuy(5, spent_points);
-	s.changeSkills();
+	r.pointBuy(5, spent_points);
+	r.changeSkills();
 	
-	s.statsPrint();
-	//this is here in the interest of disentagling rogue and stats
-	r.changeAC(r.getArmorStrength()+s.getModifier(1));
+	r.statsPrint();
+	r.racePrint();
+	
 	
 	return 0;
 }

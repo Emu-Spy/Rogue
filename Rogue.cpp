@@ -5,8 +5,6 @@ Rogue :: Rogue(){
 	//How to fix the fact that we have 2 Stats objects: calculate AC in the runner. 
 	level=0;
 	xp=0;
-	race="Elf";
-	//default speed for elves is 30
 	speed=30;
 	alignment="Chaotic Neutral";
 	age=122;
@@ -26,24 +24,12 @@ Rogue :: Rogue(){
 	equipment.push_back("Thieves' tools");
 	armor="none";
 	shield=false;
-	//Every character has Common as a language
-	languages.push_back("Common");
 }
-void Rogue :: changeRace(string racial){
-	race=racial;
-	//TODO: implement racial bonuses here. 
-}
+
 void Rogue :: changeAlignment(string align){
 	alignment=align;
 }
-void Rogue :: addLanguage(string lang){
-	languages.push_back("lang");
-}
-//this is here so we can add racial bonuses in stats.cpp
-string Rogue :: getRace(){
-	return race;
-}
-//these two are here so we can calculate AC in the runner. This is needed because it involves things from both here and stats.cpp
+
 int Rogue :: getArmorStrength(){
 	//leather is the only armor a rogue can have on generation
 	if(armor=="leather")
@@ -53,5 +39,20 @@ int Rogue :: getArmorStrength(){
 }
 void Rogue :: changeAC(int newac){
 	ac=newac;
+}
+
+void Rogue :: pointBuy(int index, int pointsSpent){
+	s.pointBuy(index, pointsSpent);
+}
+void Rogue :: changeSkills(){
+	s.changeSkills();
+	//putting this here simply because I can't think of a better place
+	changeAC(getArmorStrength()+s.getModifier(1));
+}
+void Rogue :: statsPrint(){
+	s.statsPrint();
+}
+void Rogue :: racePrint(){
+	ra.racePrint();
 }
 //TODO: print method

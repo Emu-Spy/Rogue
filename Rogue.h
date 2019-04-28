@@ -1,15 +1,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "stats.h"
+#include "Race.h"
 using namespace std;
 
 class Rogue{
 	private:
 		Stats s;
+		Race ra;
 		int level;
 		int xp;
 		int speed;
-		string race;
 		string alignment;
 		int age;
 		int ac;
@@ -31,10 +33,12 @@ class Rogue{
 	public:
 		Rogue();
 		void print();
-		void changeRace(string racial);
 		void changeAlignment(string align);
-		void addLanguage(string lang);
 		int getArmorStrength();
-		string getRace();
 		void changeAC(int newac);
+		//these methods just call a method in stats. There may be a better solution.
+		void pointBuy(int index, int pointsSpent);
+		void changeSkills();
+		void statsPrint();
+		void racePrint();
 };

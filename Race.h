@@ -4,17 +4,18 @@
 using namespace std;
 class Race
 {
-	public:
+	private:
 		string race;
 		string backstory;
 		int raceBonus[6];
+		bool skillProficiencies[18];
+		bool darkvision;
 		int speed;
 		vector <string> languages;
 		vector <string> raceAbilities;
-	private:
+	public:
 		Race();
 		Race(string p_race);
-		
 		void racePrint();
 		int* returnArray();
-}
+};

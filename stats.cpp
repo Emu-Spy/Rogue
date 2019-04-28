@@ -99,7 +99,7 @@ void Stats :: changeSkills(){
 void Stats :: addProficiency(int skill){
 	skills[skill]+=2;
 }
-//TODO: racial bonuses
+
 void Stats :: statsPrint(){
 	cout<<"Your stats are:"<<endl;
 	cout<<"Strength is: "<<values[0]<<" with a modifier of: "<<mods[0]<<" and a saving throw of: "<<skills[18]<<endl;

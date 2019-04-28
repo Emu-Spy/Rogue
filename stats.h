@@ -19,7 +19,6 @@ class Stats
 		void changeStat(int index, int newStat);
 		void pointBuy(int index, int pointsSpent);
 		void changeSkills();
-		void applyRacialModifiers();
 		void statsPrint();
 		void addProficiency(int skill);
 };
