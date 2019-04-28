@@ -42,8 +42,7 @@ int main()
 	r.pointBuy(5, spent_points);
 	r.changeSkills();
 	
-	r.statsPrint();
-	r.racePrint();
+	r.roguePrint();
 	
 	
 	return 0;

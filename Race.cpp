@@ -57,7 +57,7 @@ void Race :: racePrint(){
 		cout<<"You can see in the dark."<<endl;
 	else
 		cout<<"You can't see in the dark."<<endl;
-	cout<<"Your racial abilities are: "
+	cout<<"Your racial abilities are: ";
 	for(int j=0; j<raceAbilities.size()-1;j++){
 		cout<<raceAbilities[j]<<", ";
 	}

@@ -17,5 +17,6 @@ class Race
 		Race();
 		Race(string p_race);
 		void racePrint();
-		int* returnArray();
+		int* returnBonuses();
+		int* returnProficiencies();
 };

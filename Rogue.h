@@ -11,7 +11,6 @@ class Rogue{
 		Race ra;
 		int level;
 		int xp;
-		int speed;
 		string alignment;
 		int age;
 		int ac;
@@ -32,13 +31,11 @@ class Rogue{
 		bool shield;
 	public:
 		Rogue();
-		void print();
+		void roguePrint();
 		void changeAlignment(string align);
 		int getArmorStrength();
 		void changeAC(int newac);
 		//these methods just call a method in stats. There may be a better solution.
 		void pointBuy(int index, int pointsSpent);
 		void changeSkills();
-		void statsPrint();
-		void racePrint();
 };
