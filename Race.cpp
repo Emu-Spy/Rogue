@@ -1,3 +1,4 @@
+//Names: Aseanti, Skyler, Logan, Erika, Jacob
 #include "Race.h"
 using namespace std;
 

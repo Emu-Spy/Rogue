@@ -1,3 +1,4 @@
+//Names: Aseanti, Skyler, Logan, Erika, Jacob
 #include "Rogue.h"
 using namespace std;
 

@@ -1,3 +1,4 @@
+//Names: Aseanti, Skyler, Logan, Erika, Jacob
 #include <iostream>
 #include "stats.h"
 using namespace std;
