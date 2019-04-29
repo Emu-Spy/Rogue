@@ -22,7 +22,7 @@ Race :: Race(){
 	darkvision=true;
 }
 
-Race :: Race(string p_race){
+void Race :: changeRace(string p_race){
 	if(p_race=="Elf"){
 		race="Elf";
 		backstory="This character was chosen by the High Council of their town to go out and discover new lands for the townspeople to evactaute to after the forest dies.";
@@ -41,6 +41,12 @@ Race :: Race(string p_race){
 		}
 		skillProficiencies[13]=true;
 		darkvision=true;
+	}
+	else{
+		race="invalid";
+		backstory="ERROR: invalid race";
+		languages.push_back("ERROR: invalid race");
+		raceAbilities.push_back("ERROR: invalid race");
 	}
 
 }

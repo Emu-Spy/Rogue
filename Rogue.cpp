@@ -23,7 +23,7 @@ Rogue :: Rogue(){
 	armor="no";
 	equipment.push_back("dagger");
 	equipment.push_back("dagger");
-	equipment.push_back("theives' tools");
+	equipment.push_back("thieves' tools");
 	armor="leather";
 	shield=false;
 }
@@ -53,7 +53,7 @@ void Rogue :: changeSkills(){
 }
 void Rogue :: roguePrint(){
 	cout<<"Your level is "<<level<<" and you have "<<xp<<" experience points."<<endl;
-	cout<<"Your alignment is "<<alignment<<"and you are "<<age<<" years old."<<endl;
+	cout<<"Your alignment is "<<alignment<<" and you are "<<age<<" years old."<<endl;
 	cout<<"Your name is "<<player_name<<" and your character's name is "<<name<<endl;
 	ra.racePrint();
 	s.statsPrint();
@@ -79,4 +79,13 @@ void Rogue :: addEquipment(string newEquip){
 }
 void Rogue :: changeAge(int newAge){
 	age=newAge;
+}
+void Rogue :: changeRace(string newrace){
+	ra.changeRace(newrace);
+}
+void Rogue :: addRacialProficiencies(bool[] profs){
+	for(int j=0;j<18;j++){
+		if(profs[j]==true)
+			s.addProficiency[j];
+	}
 }

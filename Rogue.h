@@ -41,4 +41,6 @@ class Rogue{
 		void changeName(string newname);
 		void addEquipment(string newEquip);
 		void changeAge(int newAge);
+		void changeRace(string newrace);
+		void addRacialProficiencies(bool[] profs);
 };
