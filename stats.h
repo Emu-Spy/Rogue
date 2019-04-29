@@ -1,4 +1,4 @@
-//Names: Aseanti, Skyler, Logan, Erika, Jacob
+//Names: Ashanti, Skyler, Erika, Logan, Jacob
 #include <iostream>
 using namespace std;
 class Stats
