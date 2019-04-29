@@ -30,6 +30,10 @@ class Rogue{
 		string sneak_attack;
 		string armor;
 		bool shield;
+		int hp;
+		int perception;
+		int skills[24];
+		int points;
 	public:
 		Rogue();
 		void roguePrint();
@@ -42,5 +46,11 @@ class Rogue{
 		void addEquipment(string newEquip);
 		void changeAge(int newAge);
 		void changeRace(string newrace);
-		void addRacialProficiencies(bool[] profs);
+		void addRacialProficiencies(bool profs[]);
+		int calcModifier(int stat);
+		int getModifier(int index);
+		int getStat(int index);
+		void changeStat(int index, int newStat);
+		void statsPrint();
+		void addProficiency(int skill);
 };
