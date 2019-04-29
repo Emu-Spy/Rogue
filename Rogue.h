@@ -1,4 +1,4 @@
-//Names: Aseanti, Skyler, Logan, Erika, Jacob
+//Names: Ashanti, Skyler, Logan, Erika, Jacob
 #include <iostream>
 #include <string>
 #include <vector>
