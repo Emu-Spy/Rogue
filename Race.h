@@ -7,8 +7,6 @@ class Race
 {
 	private:
 		string race;
-		bool darkvision;
-		int speed;
 		string languages[3];
 		string raceAbilities[3];
 	public:
