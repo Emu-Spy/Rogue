@@ -9,8 +9,8 @@ class Race
 		string race;
 		bool darkvision;
 		int speed;
-		vector <string> languages;
-		vector <string> raceAbilities;
+		string languages[3];
+		string raceAbilities[3];
 	public:
 		Race();
 		void changeRace(string p_race);
