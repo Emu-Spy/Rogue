@@ -1,2 +1,2 @@
 # Rogue
-School project. I suggest you pay no mind.
+Code to help a player make a Rogue class in D&D (School Project).
