@@ -1,5 +1,7 @@
-//Names: Aseanti, Skyler, Logan, Erika, Jacob
+//Names: Ashanti, Skyler, Logan, Erika, Jacob
 #include "Race.h"
+#include "iostream"
+#include "string"
 using namespace std;
 
 Race :: Race(){
@@ -11,10 +13,12 @@ Race :: Race(){
 		raceBonus[i]=0;
 	}
 	speed=30;
-	languages.push_back("Common");
-	languages.push_back("Elvish");
-	raceAbilities.push_back("Fey Ancestry");
-	raceAbilities.push_back("Trance");
+	languages[0] = "Common";
+	languages[1] = "Elvish";
+	languages[2] = "Empty";
+	raceAbilities[0] = "Fey Ancestry";
+	raceAbilities[1] = "Trance";
+	raceAbilities[2] = "Empty";
 	for(int j=0;j<18;j++){
 		skillProficiencies[j]=false;
 	}
@@ -32,10 +36,12 @@ void Race :: changeRace(string p_race){
 			raceBonus[i]=0;
 		}
 		speed=30;
-		languages.push_back("Common");
-		languages.push_back("Elvish");
-		raceAbilities.push_back("Fey Ancestry");
-		raceAbilities.push_back("Trance");
+		languages[0] = "Common";
+		languages[1] = "Elvish";
+		languages[2] = "Empty";
+		raceAbilities[0] = "Fey Ancestry";
+		raceAbilities[1] = "Trance";
+		raceAbilities[2] = "Empty";
 		for(int j=0;j<18;j++){
 			skillProficiencies[j]=false;
 		}
@@ -45,10 +51,12 @@ void Race :: changeRace(string p_race){
 	else{
 		race="invalid";
 		backstory="ERROR: invalid race";
-		languages.push_back("ERROR: invalid race");
-		raceAbilities.push_back("ERROR: invalid race");
+		for(int i = 0; i < 3; i++)
+		{
+			languages[i] = "Empty";
+			raceAbilities[i] = "Empty";
+		}
 	}
-
 }
 
 void Race :: racePrint(){
@@ -56,17 +64,31 @@ void Race :: racePrint(){
 	cout<<"Your backstory is: "<<backstory<<endl;
 	cout<<"The languages you know are: ";
 	//this for loop is like this so no comma gets printed after the last language. Ditto for the raceAbilities loop a few lines down.
-	for(int i=0; i<languages.size()-1;i++){
-		cout<<languages[i]<<", ";
+	for(int i=0;i<2;i++){
+		if(languages[i] == "Empty")
+		{	
+			cout<<"."<<endl;
+			i=2;
+		}
+		else
+			cout<<languages[i]<<", ";
 	}
-	cout<<languages[languages.size()-1]<<"."<<endl;
+	if(languages[2] != "Empty")
+		cout<<languages[2]<<"."<<endl;
 	if(darkvision==true)
 		cout<<"You can see in the dark."<<endl;
 	else
 		cout<<"You can't see in the dark."<<endl;
 	cout<<"Your racial abilities are: ";
-	for(int j=0; j<raceAbilities.size()-1;j++){
-		cout<<raceAbilities[j]<<", ";
+	for(int j=0; j<2;j++){
+		if(raceAbilities[j] == "Empty")
+		{
+			cout<<"."<<endl;
+			j=2;
+		}
+		else
+			cout<<raceAbilities[j]<<", ";
 	}
-	cout<<raceAbilities[raceAbilities.size()-1]<<"."<<endl;
+	if(raceAbilities[2] != "Empty")
+		cout<<raceAbilities[2]<<"."<<endl;
 }
