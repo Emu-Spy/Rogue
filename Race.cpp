@@ -31,7 +31,6 @@ void Race :: changeRace(string p_race){
 		for(int i=2;i<7;i++){
 			raceBonus[i]=0;
 		}
-		speed=30;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
 		languages[2] = "Empty";
