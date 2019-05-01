@@ -7,8 +7,6 @@ class Race
 {
 	private:
 		string race;
-		int raceBonus[6];
-		bool skillProficiencies[18];
 		bool darkvision;
 		int speed;
 		vector <string> languages;
@@ -17,7 +15,4 @@ class Race
 		Race();
 		void changeRace(string p_race);
 		void racePrint();
-		//TODO: code these methods and then use them in rogue.cpp
-		int* returnBonuses();
-		int* returnProficiencies();
 };
