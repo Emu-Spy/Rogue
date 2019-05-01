@@ -7,7 +7,6 @@ class Race
 {
 	private:
 		string race;
-		string backstory;
 		int raceBonus[6];
 		bool skillProficiencies[18];
 		bool darkvision;
