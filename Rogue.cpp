@@ -30,8 +30,8 @@ Rogue :: Rogue(){
 	for(int i=0; i<24; i++){
 		skills[i]=-1;
 	}
-	hp=getModifier(2)+8;
-	perception=getModifier(4)+10;
+	hp=calcModifier(2)+8;
+	perception=calcModifier(4)+10;
 }
 
 void Rogue :: changeAlignment(string align){
@@ -103,7 +103,7 @@ void Rogue :: changeSkills(){
 	skills[22]=s.returnMod(4);
 	skills[23]=s.returnMod(5);
 
-	changeAC(getArmorStrength()+getModifier(1));
+	changeAC(getArmorStrength()+calcModifier(1));
 }
 void Rogue :: roguePrint(){
 	cout<<"Your level is "<<level<<" and you have "<<xp<<" experience points."<<endl;
