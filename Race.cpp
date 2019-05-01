@@ -6,7 +6,6 @@ using namespace std;
 
 Race :: Race(){
 	race="Elf";
-	backstory="This character was chosen by the High Council of their town to go out and discover new lands for the townspeople to evactaute to after the forest dies.";
 	raceBonus[0]=0;
 	raceBonus[1]=2;
 	for(int i=2;i<7;i++){
@@ -29,7 +28,6 @@ Race :: Race(){
 void Race :: changeRace(string p_race){
 	if(p_race=="Elf"){
 		race="Elf";
-		backstory="This character was chosen by the High Council of their town to go out and discover new lands for the townspeople to evactaute to after the forest dies.";
 		raceBonus[0]=0;
 		raceBonus[1]=2;
 		for(int i=2;i<7;i++){
@@ -50,7 +48,6 @@ void Race :: changeRace(string p_race){
 	}
 	else{
 		race="invalid";
-		backstory="ERROR: invalid race";
 		for(int i = 0; i < 3; i++)
 		{
 			languages[i] = "Empty";
@@ -61,7 +58,6 @@ void Race :: changeRace(string p_race){
 
 void Race :: racePrint(){
 	cout<<"Your race is: "<<race<<endl;
-	cout<<"Your backstory is: "<<backstory<<endl;
 	cout<<"The languages you know are: ";
 	//this for loop is like this so no comma gets printed after the last language. Ditto for the raceAbilities loop a few lines down.
 	for(int i=0;i<2;i++){
