@@ -29,6 +29,6 @@ void Stats :: change(string var, int i, int newVal)
 	}
 	if(var == "mods")
 	{
-		values[i] = newVal;
+		mods[i] = newVal;
 	}
 }
