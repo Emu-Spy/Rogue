@@ -11,7 +11,6 @@ Race :: Race(){
 	for(int i=2;i<7;i++){
 		raceBonus[i]=0;
 	}
-	speed=30;
 	languages[0] = "Common";
 	languages[1] = "Elvish";
 	languages[2] = "Empty";
@@ -22,7 +21,6 @@ Race :: Race(){
 		skillProficiencies[j]=false;
 	}
 	skillProficiencies[13]=true;
-	darkvision=true;
 }
 
 void Race :: changeRace(string p_race){
@@ -44,7 +42,6 @@ void Race :: changeRace(string p_race){
 			skillProficiencies[j]=false;
 		}
 		skillProficiencies[13]=true;
-		darkvision=true;
 	}
 	else{
 		race="invalid";
@@ -71,10 +68,6 @@ void Race :: racePrint(){
 	}
 	if(languages[2] != "Empty")
 		cout<<languages[2]<<"."<<endl;
-	if(darkvision==true)
-		cout<<"You can see in the dark."<<endl;
-	else
-		cout<<"You can't see in the dark."<<endl;
 	cout<<"Your racial abilities are: ";
 	for(int j=0; j<2;j++){
 		if(raceAbilities[j] == "Empty")
