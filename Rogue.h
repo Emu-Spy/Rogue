@@ -34,6 +34,8 @@ class Rogue{
 		int perception;
 		int skills[24];
 		int points;
+		string spell;
+		int castAbility;
 	public:
 		Rogue();
 		void roguePrint();
