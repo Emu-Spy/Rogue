@@ -16,6 +16,9 @@ Race :: Race(){
 	raceAbilities[0] = "Fey Ancestry";
 	raceAbilities[1] = "Trance";
 	raceAbilities[2] = "Empty";
+	size=medium;
+	speed=30;
+	darkvision=true;
 	for(int j=0;j<18;j++){
 		skillProficiencies[j]=false;
 	}
