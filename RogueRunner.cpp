@@ -13,7 +13,7 @@ int main()
 	Rogue r;
 	cout<< "Welcome to your guide through making a Rogue class DnD character. ";
 	cout<< "Here you will be able to set your character's ability scores, weaponry, age, and race." << endl;
-	cout<< "WARNING: when asked for input, at no point should you enter any spaces."<<endl;
+	cout<< "WARNING: when asked for input, at no point should you enter any spaces. Enter underscores instead"<<endl;
 
 	//put equipment & stuff here
 	cout<<"Would you like a rapier or a shortsword?"<<endl;
