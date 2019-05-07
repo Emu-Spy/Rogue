@@ -5,37 +5,16 @@
 using namespace std;
 
 Race :: Race(){
-	race="Elf";
-	for(int i=0;i<7;i++){
-		raceBonus[i]=0;
-	}
-	raceBonus[1]=2;
-	languages[0] = "Common";
-	languages[1] = "Elvish";
-	languages[2] = "Empty";
-	raceAbilities[0] = "Fey Ancestry";
-	raceAbilities[1] = "Trance";
-	raceAbilities[2] = "Empty";
-	size=medium;
-	speed=30;
-	darkvision=true;
-	for(int j=0;j<18;j++){
-		skillProficiencies[j]=false;
-	}
-	skillProficiencies[13]=true;
-}
-
-void Race :: changeRace(string p_race){
-	string lang = "";
-	if(p_race=="Elf"){
-		race="Elf";
+	race="High Elf";
 		raceBonus[3] += 1;
 		raceBonus[1] +=2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
-		cout<< "Pick your third language: ";
+		cout<< "Pick your third language: "<<endl;
 		cin>> lang;
 		languages[2] = lang;
+		cout<< "Pick a cantrip from the wizard list"<<endl;
+		cin>> cantrip;
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
@@ -44,9 +23,38 @@ void Race :: changeRace(string p_race){
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
+		size="medium";
+		speed=30;
+		darkvision=true;
+}
+
+void Race :: changeRace(string p_race){
+	string lang = "";
+	if(p_race=="Elf"){
+		race="High Elf";
+		raceBonus[3] += 1;
+		raceBonus[1] +=2;
+		languages[0] = "Common";
+		languages[1] = "Elvish";
+		cout<< "Pick your third language: "<<endl;
+		cin>> lang;
+		languages[2] = lang;
+		cout<< "Pick a cantrip from the wizard list"<<endl;
+		cin>> cantrip;
+		raceAbilities[0] = "Fey Ancestry";
+		raceAbilities[1] = "Trance";
+		raceAbilities[2] = "Empty";
+		raceAbilities[3] = "Empty";
+		raceAbilities[4] = "Empty";
+		raceAbilities[5] = "Empty";
+		raceAbilities[6] = "Empty";
+		skillProficiencies[13]=true;
+		size="medium";
+		speed=30;
+		darkvision=true;
 	}
 	if(p_race=="Halfling"){
-		race="Halfling";
+		race="Lightfoot Halfling";
 		raceBonus[1] += 2;
 		raceBonus[5] += 1;
 		languages[0] = "Common";
@@ -59,8 +67,10 @@ void Race :: changeRace(string p_race){
 		raceAbilities[4] = "Empty";
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
-		
 		skillProficiencies[13]=true;
+		size = "small";
+		speed = 25;
+		darkvision = false;
 	}
 	if(p_race=="Human"){
 		race="Human";
