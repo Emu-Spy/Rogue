@@ -23,13 +23,16 @@ Race :: Race(){
 }
 
 void Race :: changeRace(string p_race){
+	string lang = "";
 	if(p_race=="Elf"){
 		race="Elf";
 		raceBonus[3] += 1;
 		raceBonus[1]=2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
-		languages[2] = "Empty";
+		cout<< "Pick your third language: "
+		cin<< lang;
+		languages[2] = lang;
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
