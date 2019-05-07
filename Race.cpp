@@ -93,6 +93,9 @@ void Race :: changeRace(string p_race){
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
+		speed = 30;
+		size = "Medium";
+		darkvision = false;
 	else{
 		race="invalid";
 		for(int i = 0; i < 3; i++)
