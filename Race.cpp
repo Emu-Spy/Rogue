@@ -25,7 +25,7 @@ Race :: Race(){
 void Race :: changeRace(string p_race){
 	if(p_race=="Elf"){
 		race="Elf";
-		raceBonus[0]=0;
+		raceBonus[3] += 1;
 		raceBonus[1]=2;
 		for(int i=2;i<7;i++){
 			raceBonus[i]=0;
