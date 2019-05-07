@@ -80,3 +80,8 @@ void Race :: racePrint(){
 	if(raceAbilities[2] != "Empty")
 		cout<<raceAbilities[2]<<"."<<endl;
 }
+
+string Race :: returnRace()
+{
+	return race;
+}
