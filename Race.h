@@ -1,4 +1,4 @@
-//Names: Aseanti, Skyler, Logan, Erika, Jacob
+//Names: Ashanti, Skyler, Logan, Erika, Jacob
 #include <iostream>
 #include <string>
 using namespace std;
@@ -11,7 +11,7 @@ class Race
 		bool darkvision;
 		int speed;
 		string languages[3];
-		string raceAbilities[3];
+		string raceAbilities[7];
 		int raceBonus[6];
 		bool skillProficiencies[18];
 	public:
