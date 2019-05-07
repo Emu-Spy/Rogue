@@ -49,7 +49,7 @@ void Race :: changeRace(string p_race){
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
-		size="medium";
+		size="Medium";
 		speed=30;
 		darkvision=true;
 	}
@@ -68,7 +68,7 @@ void Race :: changeRace(string p_race){
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
-		size = "small";
+		size = "Small";
 		speed = 25;
 		darkvision = false;
 	}
