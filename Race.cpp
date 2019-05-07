@@ -6,11 +6,10 @@ using namespace std;
 
 Race :: Race(){
 	race="Elf";
-	raceBonus[0]=0;
-	raceBonus[1]=2;
-	for(int i=2;i<7;i++){
+	for(int i=0;i<7;i++){
 		raceBonus[i]=0;
 	}
+	raceBonus[1]=2;
 	languages[0] = "Common";
 	languages[1] = "Elvish";
 	languages[2] = "Empty";
