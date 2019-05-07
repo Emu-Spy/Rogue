@@ -30,9 +30,11 @@ void Race :: changeRace(string p_race){
 		raceBonus[1]=2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
-		cout<< "Pick your third language: ";
+		cout<< "Pick your third language: "<<endl;
 		cin<< lang;
 		languages[2] = lang;
+		cout<< "Pick a cantrip from the Wizard list"<<endl;
+		cin<< cantrip;
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
