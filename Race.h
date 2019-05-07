@@ -6,6 +6,7 @@ class Race
 {
 	private:
 		string race;
+		string cantrip;
 		string languages[3];
 		string raceAbilities[3];
 		int raceBonus[6];
