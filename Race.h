@@ -6,7 +6,10 @@ class Race
 {
 	private:
 		string race;
+		string size;
 		string cantrip;
+		bool darkvision;
+		int speed;
 		string languages[3];
 		string raceAbilities[3];
 		int raceBonus[6];
