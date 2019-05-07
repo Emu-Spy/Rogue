@@ -36,6 +36,10 @@ void Race :: changeRace(string p_race){
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
+		raceAbilities[3] = "Empty";
+		raceAbilities[4] = "Empty";
+		raceAbilities[5] = "Empty";
+		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
 	}
 	if(p_race=="Halfling"){
@@ -45,9 +49,14 @@ void Race :: changeRace(string p_race){
 		languages[0] = "Common";
 		languages[1] = "Halfling";
 		languages[2] = "Empty";
-		raceAbilities[0] = "Empty";
-		raceAbilities[1] = "Empty";
-		raceAbilities[2] = "Empty";
+		raceAbilities[0] = "Lucky";
+		raceAbilities[1] = "Brave";
+		raceAbilities[2] = "Halfling Nimbleness";
+		raceAbilities[3] = "Naturally Stealthy";
+		raceAbilities[4] = "Empty";
+		raceAbilities[5] = "Empty";
+		raceAbilities[6] = "Empty";
+		
 		skillProficiencies[13]=true;
 	}
 	else{
