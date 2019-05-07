@@ -49,7 +49,7 @@ void Race :: changeRace(string p_race){
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
-		size="Medium";
+		size="medium";
 		speed=30;
 		darkvision=true;
 	}
@@ -68,7 +68,7 @@ void Race :: changeRace(string p_race){
 		raceAbilities[5] = "Empty";
 		raceAbilities[6] = "Empty";
 		skillProficiencies[13]=true;
-		size = "Small";
+		size = "small";
 		speed = 25;
 		darkvision = false;
 	}
@@ -96,6 +96,27 @@ void Race :: changeRace(string p_race){
 		speed = 30;
 		size = "Medium";
 		darkvision = false;
+		
+	if(p_race=="Hill Dwarf"){
+		race="Dwarf";
+		raceBonus[2] += 2;
+		raceBonus[4] += 1;
+		languages[0] = "Common";
+		languages[1] = "Dwarvish";
+		languages[2] = "Empty";
+		raceAbilities[0] = "Empty";
+		raceAbilities[1] = "Dwarven Resilience";
+		raceAbilities[2] = "Dwarven Combat Training";
+		raceAbilities[3] = "Tool Proficiency";
+		raceAbilities[4] = "Stonecutting";
+		raceAbilities[5] = "Dwarven Toughness";
+		raceAbilities[6] = "Empty";
+		speed = 25;
+		size = "Medium";
+		darkvision = true;
+		
+		skillProficiencies[13]=true;
+	}
 	else{
 		race="invalid";
 		for(int i = 0; i < 3; i++)
