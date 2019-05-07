@@ -27,14 +27,24 @@ void Race :: changeRace(string p_race){
 	if(p_race=="Elf"){
 		race="Elf";
 		raceBonus[3] += 1;
-		raceBonus[1]=2;
+		raceBonus[1] +=2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
-		cout<< "Pick your third language: "<<endl;
+		cout<< "Pick your third language: ";
 		cin<< lang;
 		languages[2] = lang;
-		cout<< "Pick a cantrip from the Wizard list"<<endl;
-		cin<< cantrip;
+		raceAbilities[0] = "Fey Ancestry";
+		raceAbilities[1] = "Trance";
+		raceAbilities[2] = "Empty";
+		skillProficiencies[13]=true;
+	}
+	if(p_race=="Halfling"){
+		race="Halfling";
+		raceBonus[1] += 2;
+		raceBonus[5] += 1;
+		languages[0] = "Common";
+		languages[1] = "Halfling";
+		languages[2] = "Empty";
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
