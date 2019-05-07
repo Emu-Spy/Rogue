@@ -97,8 +97,8 @@ void Race :: changeRace(string p_race){
 		size = "Medium";
 		darkvision = false;
 		
-	if(p_race=="Hill Dwarf"){
-		race="Dwarf";
+	if(p_race=="Dwarf"){
+		race="Hill Dwarf";
 		raceBonus[2] += 2;
 		raceBonus[4] += 1;
 		languages[0] = "Common";
