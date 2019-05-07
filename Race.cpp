@@ -5,6 +5,7 @@
 using namespace std;
 
 Race :: Race(){
+	string lang = "";
 	race="High Elf";
 		raceBonus[3] += 1;
 		raceBonus[1] +=2;
