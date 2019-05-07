@@ -27,18 +27,12 @@ void Race :: changeRace(string p_race){
 		race="Elf";
 		raceBonus[3] += 1;
 		raceBonus[1]=2;
-		for(int i=2;i<7;i++){
-			raceBonus[i]=0;
-		}
 		languages[0] = "Common";
 		languages[1] = "Elvish";
 		languages[2] = "Empty";
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
-		for(int j=0;j<18;j++){
-			skillProficiencies[j]=false;
-		}
 		skillProficiencies[13]=true;
 	}
 	else{
