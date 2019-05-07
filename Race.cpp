@@ -28,16 +28,14 @@ Race :: Race(){
 void Race :: changeRace(string p_race){
 	string lang = "";
 	if(p_race=="Elf"){
-		race="High Elf";
+		race="Elf";
 		raceBonus[3] += 1;
 		raceBonus[1] +=2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
-		cout<< "Pick your third language: "<<endl;
+		cout<< "Pick your third language: ";
 		cin>> lang;
 		languages[2] = lang;
-		cout<< "Pick a cantrip from the wizard list"<<endl;
-		cin>> cantrip;
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
@@ -48,7 +46,7 @@ void Race :: changeRace(string p_race){
 		skillProficiencies[13]=true;
 	}
 	if(p_race=="Halfling"){
-		race="Lightfoot Halfling";
+		race="Halfling";
 		raceBonus[1] += 2;
 		raceBonus[5] += 1;
 		languages[0] = "Common";
@@ -64,6 +62,27 @@ void Race :: changeRace(string p_race){
 		
 		skillProficiencies[13]=true;
 	}
+	if(p_race=="Human"){
+		race="Human";
+		raceBonus[0] += 1;
+		raceBonus[1] += 1;
+		raceBonus[2] += 1;
+		raceBonus[3] += 1;
+		raceBonus[4] += 1;
+		raceBonus[5] += 1;
+		languages[0] = "Common";
+		cout<< "Pick your second language: ";
+		cin>> lang;
+		languages[1] = lang;
+		languages[2] = "Empty";
+		raceAbilities[0] = "Speed";
+		raceAbilities[1] = "Empty";
+		raceAbilities[2] = "Empty";
+		raceAbilities[3] = "Empty";
+		raceAbilities[4] = "Empty";
+		raceAbilities[5] = "Empty";
+		raceAbilities[6] = "Empty";
+		skillProficiencies[13]=true;
 	else{
 		race="invalid";
 		for(int i = 0; i < 3; i++)
