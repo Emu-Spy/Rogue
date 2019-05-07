@@ -45,8 +45,8 @@ void Race :: changeRace(string p_race){
 		languages[0] = "Common";
 		languages[1] = "Halfling";
 		languages[2] = "Empty";
-		raceAbilities[0] = "Fey Ancestry";
-		raceAbilities[1] = "Trance";
+		raceAbilities[0] = "Empty";
+		raceAbilities[1] = "Empty";
 		raceAbilities[2] = "Empty";
 		skillProficiencies[13]=true;
 	}
