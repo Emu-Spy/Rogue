@@ -34,7 +34,7 @@ void Race :: changeRace(string p_race){
 		languages[0] = "Common";
 		languages[1] = "Elvish";
 		cout<< "Pick your third language: ";
-		cin<< lang;
+		cin>> lang;
 		languages[2] = lang;
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
