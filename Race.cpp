@@ -12,7 +12,7 @@ Race :: Race(){
 		languages[0] = "Common";
 		languages[1] = "Elvish";
 		cout<< "Pick your third language: "<<endl;
-		cin>> lang;
+		cin >> lang;
 		languages[2] = lang;
 		cout<< "Pick a cantrip from the wizard list"<<endl;
 		cin>> cantrip;
@@ -97,6 +97,7 @@ void Race :: changeRace(string p_race){
 		speed = 30;
 		size = "Medium";
 		darkvision = false;
+	}
 		
 	if(p_race=="Dwarf"){
 		race="Hill Dwarf";
@@ -144,17 +145,27 @@ void Race :: racePrint(){
 	if(languages[2] != "Empty")
 		cout<<languages[2]<<"."<<endl;
 	cout<<"Your racial abilities are: ";
-	for(int j=0; j<2;j++){
+	for(int j=0; j<6;j++){
 		if(raceAbilities[j] == "Empty")
 		{
 			cout<<"."<<endl;
-			j=2;
+			j=6;
 		}
 		else
 			cout<<raceAbilities[j]<<", ";
 	}
-	if(raceAbilities[2] != "Empty")
-		cout<<raceAbilities[2]<<"."<<endl;
+	if(raceAbilities[6] != "Empty")
+		cout<<raceAbilities[6]<<"."<<endl;
+	cout << "Your size is " << size << endl;
+	cout << "Your speed is " << speed << " feet.\n";
+	if(darkvision == true)
+	{
+		cout << "You can see in the dark." << endl;
+	}
+	else
+	{
+		cout << "You cannot see in the dark." << endl;
+	}
 }
 
 string Race :: returnRace()
