@@ -11,11 +11,6 @@ Race :: Race(){
 		raceBonus[1] +=2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
-		cout<< "Pick your third language: "<<endl;
-		cin >> lang;
-		languages[2] = lang;
-		cout<< "Pick a cantrip from the wizard list"<<endl;
-		cin>> cantrip;
 		raceAbilities[0] = "Fey Ancestry";
 		raceAbilities[1] = "Trance";
 		raceAbilities[2] = "Empty";
@@ -54,7 +49,7 @@ void Race :: changeRace(string p_race){
 		speed=30;
 		darkvision=true;
 	}
-	if(p_race=="Halfling"){
+	else if(p_race=="Halfling"){
 		race="Lightfoot Halfling";
 		raceBonus[1] += 2;
 		raceBonus[5] += 1;
@@ -73,7 +68,7 @@ void Race :: changeRace(string p_race){
 		speed = 25;
 		darkvision = false;
 	}
-	if(p_race=="Human"){
+	else if(p_race=="Human"){
 		race="Human";
 		raceBonus[0] += 1;
 		raceBonus[1] += 1;
@@ -86,7 +81,7 @@ void Race :: changeRace(string p_race){
 		cin>> lang;
 		languages[1] = lang;
 		languages[2] = "Empty";
-		raceAbilities[0] = "Speed";
+		raceAbilities[0] = "Empty";
 		raceAbilities[1] = "Empty";
 		raceAbilities[2] = "Empty";
 		raceAbilities[3] = "Empty";
@@ -99,7 +94,7 @@ void Race :: changeRace(string p_race){
 		darkvision = false;
 	}
 		
-	if(p_race=="Dwarf"){
+	else if(p_race=="Dwarf"){
 		race="Hill Dwarf";
 		raceBonus[2] += 2;
 		raceBonus[4] += 1;
@@ -166,6 +161,7 @@ void Race :: racePrint(){
 	{
 		cout << "You cannot see in the dark." << endl;
 	}
+	if()
 }
 
 string Race :: returnRace()
