@@ -3,7 +3,6 @@
 using namespace std;
 
 Rogue :: Rogue(){
-	//How to fix the fact that we have 2 Stats objects: calculate AC in the runner. 
 	level=0;
 	points=27;
 	xp=0;
@@ -32,6 +31,7 @@ Rogue :: Rogue(){
 	}
 	hp=calcModifier(2)+8;
 	perception=calcModifier(4)+10;
+	castAbility="Intelligence";
 }
 
 void Rogue :: changeAlignment(string align){
@@ -124,6 +124,11 @@ void Rogue :: roguePrint(){
 		cout<<"a shield."<<endl;
 	else
 		cout<<"no shield."<<endl;
+	cout<<"Your roguish archetype is "<<archetype<<"."<<endl;
+	if(level>=3)
+		cout<<"your class abilities are: "<<abilities[1]<<" and "<<abilities[2]<<endl;
+	else if(level==2)
+		cout<<"You have one racial ability, "<<abilities[1]<<endl;
 }
 void Rogue :: changeName(string newname){
 	name=newname;
@@ -180,5 +185,39 @@ void Rogue :: statsPrint(){
 	cout<<"Here are your skills, listed from top on the character sheet to bottom"<<endl;
 	for(int i=0;i<18;i++){
 		cout<<skills[i]<<endl;
+	}
+}
+
+void Rogue :: levelUp(int p_level){
+	if(p_level==4){
+		//recursion-esque, ensures every level gets the bonuses of all the levels below it
+		levelUp(3);
+		level=4;
+		//do the ability score improvement
+		cout<<"You have 2 points to improve your 6 ability scores. Where would you like your first point?"<<endl;
+		cout<<"0. Strength 1. Dexterity 2. Constitution 3. Intelligence 4. Wisdom 5. Charisma"<<endl;
+		int temp;
+		cin>>temp;
+		changeStat(temp, getStat(temp)+1);
+		cout<<"And your second point?"<<endl;
+		cin>>temp;
+		changeStat(temp, getStat(temp)+1);
+	}
+	else if(p_level==3){
+		levelUp(2);
+		level=3;
+		archetype="Thief";
+		sneak_attack="2d6";
+		ablilties[2]="Fast Hands";
+	}
+	else if(p_level==2){
+		level=2;
+		abilities[1]="Cunning Action";
+	}
+	else if(p_level==1){
+		level=1;
+	}
+	else{
+		level="INVALID LEVEL";
 	}
 }
