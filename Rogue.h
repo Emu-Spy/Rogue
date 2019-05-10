@@ -31,13 +31,16 @@ class Rogue{
 		string armor;
 		bool shield;
 		int hp;
+		string archetype;
+		string abilities[2];
 		int perception;
 		int skills[24];
 		int points;
 		string spell;
-		int castAbility;
+		string castAbility;
 	public:
 		Rogue();
+		void levelUp(int p_level);
 		void roguePrint();
 		void changeAlignment(string align);
 		int getArmorStrength();
