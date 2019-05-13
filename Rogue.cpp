@@ -221,3 +221,13 @@ void Rogue :: levelUp(int p_level){
 		level="INVALID LEVEL";
 	}
 }
+
+void Rogue :: addRacialBonuses()
+{
+	int temp;
+	for(int i=0; i>6; i++)
+	{
+		temp = s.returnStat(i)+ra.returnBonus(i);
+		s.change("stats", i, temp);
+	}
+}
