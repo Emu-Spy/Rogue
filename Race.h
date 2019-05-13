@@ -19,4 +19,5 @@ class Race
 		void changeRace(string p_race);
 		void racePrint();
 		string returnRace();
+		int returnBonus(int stat);
 };
