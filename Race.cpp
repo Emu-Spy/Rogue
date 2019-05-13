@@ -51,8 +51,8 @@ void Race :: changeRace(string p_race){
 	}
 	else if(p_race=="Halfling"){
 		race="Lightfoot Halfling";
-		raceBonus[1] += 2;
-		raceBonus[5] += 1;
+		raceBonus[1] = 2;
+		raceBonus[5] = 1;
 		languages[0] = "Common";
 		languages[1] = "Halfling";
 		languages[2] = "Empty";
