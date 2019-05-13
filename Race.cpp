@@ -168,3 +168,8 @@ string Race :: returnRace()
 {
 	return race;
 }
+
+int Race :: returnBonus(int stat)
+{
+	return raceBonus[stat];
+}
