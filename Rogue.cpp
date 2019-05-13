@@ -208,11 +208,11 @@ void Rogue :: levelUp(int p_level){
 		level=3;
 		archetype="Thief";
 		sneak_attack="2d6";
-		ablilties[2]="Fast Hands";
+		ablilties[1]="Fast Hands";
 	}
 	else if(p_level==2){
 		level=2;
-		abilities[1]="Cunning Action";
+		abilities[0]="Cunning Action";
 	}
 	else if(p_level==1){
 		level=1;
