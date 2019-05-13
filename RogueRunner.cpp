@@ -14,12 +14,12 @@ int main()
 	cout<< "Welcome to your guide through making a Rogue class DnD character. ";
 	cout<< "Here you will be able to set your character's ability scores, weaponry, age, and race." << endl;
 	cout<< "WARNING: when asked for input, at no point should you enter any spaces. Enter underscores instead"<<endl;
+	
 	cout<< "What level would you like your character to be? (1-4)"<<endl;
 	cin>>things;
 	r.levelUp(things);
-	
+
 	//put equipment & stuff here
-	
 	cout<<"Would you like a rapier or a shortsword?"<<endl;
 	cin>>equip;
 	r.addEquipment(equip);
@@ -76,7 +76,7 @@ int main()
 	cin>>stuff;
 	r.changeRace(stuff);
 	//once the returnProficiencies method is done, add some code here to change racial proficiencies.
-	
+	r.addRacialBonuses();
 	r.roguePrint();
 	
 	
