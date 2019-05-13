@@ -144,7 +144,6 @@ void Rogue :: changeAge(int newAge){
 }
 void Rogue :: changeRace(string newrace){
 	ra.changeRace(newrace);
-	addRacialBonuses();
 }
 void Rogue :: addRacialProficiencies(bool profs[]){
 	for(int j=0;j<18;j++){
@@ -231,10 +230,11 @@ void Rogue :: levelUp(int p_level){
 
 void Rogue :: addRacialBonuses()
 {
-	int temp;
-	for(int i=0; i>6; i++)
+	int temp = 0;
+	for(int i=0; i<6; i++)
 	{
-		temp = s.returnStat(i)+ra.returnBonus(i);
+		temp = s.returnStat(i) + ra.returnBonus(i);
 		s.change("stats", i, temp);
+		calcModifier(i);
 	}
 }
