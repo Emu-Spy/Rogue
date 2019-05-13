@@ -129,16 +129,15 @@ void Race :: racePrint(){
 	cout<<"The languages you know are: ";
 	//this for loop is like this so no comma gets printed after the last language. Ditto for the raceAbilities loop a few lines down.
 	for(int i=0;i<2;i++){
-		if(languages[i] == "Empty")
+		if(languages[i] != "Empty")
 		{	
-			cout<<"."<<endl;
-			i=2;
+			cout<< languages[i] << ", ";
 		}
 		else
-			cout<<languages[i]<<", ";
+		{
+			cout<< "." << endl;
+		}
 	}
-	if(languages[2] != "Empty")
-		cout<<languages[2]<<"."<<endl;
 	cout<<"Your racial abilities are: ";
 	for(int j=0; j<6;j++){
 		if(raceAbilities[j] == "Empty")
