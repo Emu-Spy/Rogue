@@ -161,7 +161,6 @@ void Race :: racePrint(){
 	{
 		cout << "You cannot see in the dark." << endl;
 	}
-	if()
 }
 
 string Race :: returnRace()
