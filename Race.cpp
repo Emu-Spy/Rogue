@@ -7,8 +7,8 @@ using namespace std;
 Race :: Race(){
 	string lang = "";
 	race="High Elf";
-		raceBonus[3] += 1;
-		raceBonus[1] +=2;
+		raceBonus[3] = 1;
+		raceBonus[1] =2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
 		raceAbilities[0] = "Fey Ancestry";
@@ -28,8 +28,8 @@ void Race :: changeRace(string p_race){
 	string lang = "";
 	if(p_race=="Elf"){
 		race="High Elf";
-		raceBonus[3] += 1;
-		raceBonus[1] +=2;
+		raceBonus[3] = 1;
+		raceBonus[1] = 2;
 		languages[0] = "Common";
 		languages[1] = "Elvish";
 		cout<< "Pick your third language: "<<endl;
@@ -70,12 +70,12 @@ void Race :: changeRace(string p_race){
 	}
 	else if(p_race=="Human"){
 		race="Human";
-		raceBonus[0] += 1;
-		raceBonus[1] += 1;
-		raceBonus[2] += 1;
-		raceBonus[3] += 1;
-		raceBonus[4] += 1;
-		raceBonus[5] += 1;
+		raceBonus[0] = 1;
+		raceBonus[1] = 1;
+		raceBonus[2] = 1;
+		raceBonus[3] = 1;
+		raceBonus[4] = 1;
+		raceBonus[5] = 1;
 		languages[0] = "Common";
 		cout<< "Pick your second language: ";
 		cin>> lang;
@@ -96,8 +96,8 @@ void Race :: changeRace(string p_race){
 		
 	else if(p_race=="Dwarf"){
 		race="Hill Dwarf";
-		raceBonus[2] += 2;
-		raceBonus[4] += 1;
+		raceBonus[2] = 2;
+		raceBonus[4] = 1;
 		languages[0] = "Common";
 		languages[1] = "Dwarvish";
 		languages[2] = "Empty";
