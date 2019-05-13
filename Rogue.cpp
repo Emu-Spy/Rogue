@@ -32,6 +32,8 @@ Rogue :: Rogue(){
 	hp=calcModifier(2)+8;
 	perception=calcModifier(4)+10;
 	castAbility="Intelligence";
+	abilities[0]="Empty";
+	abilities[1]="Empty";
 }
 
 void Rogue :: changeAlignment(string align){
@@ -167,7 +169,7 @@ int Rogue :: getStat(int index){
 
 void Rogue :: changeStat(int index, int newStat){
 	s.change("stats", index, newStat);
-	s.change("mods", index, newStat);
+	s.change("mods", index, calcModifier(newStat));
 }
 
 void Rogue :: addProficiency(int skill){
@@ -208,7 +210,7 @@ void Rogue :: levelUp(int p_level){
 		level=3;
 		archetype="Thief";
 		sneak_attack="2d6";
-		ablilties[1]="Fast Hands";
+		abilities[1]="Fast Hands";
 	}
 	else if(p_level==2){
 		level=2;
@@ -218,7 +220,7 @@ void Rogue :: levelUp(int p_level){
 		level=1;
 	}
 	else{
-		level="INVALID LEVEL";
+		level=1;
 	}
 }
 
