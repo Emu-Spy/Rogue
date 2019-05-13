@@ -34,6 +34,7 @@ Rogue :: Rogue(){
 	castAbility="Intelligence";
 	abilities[0]="Empty";
 	abilities[1]="Empty";
+	archetype="None";
 }
 
 void Rogue :: changeAlignment(string align){
@@ -143,6 +144,7 @@ void Rogue :: changeAge(int newAge){
 }
 void Rogue :: changeRace(string newrace){
 	ra.changeRace(newrace);
+	addRacialBonuses();
 }
 void Rogue :: addRacialProficiencies(bool profs[]){
 	for(int j=0;j<18;j++){
@@ -215,12 +217,15 @@ void Rogue :: levelUp(int p_level){
 	else if(p_level==2){
 		level=2;
 		abilities[0]="Cunning Action";
+		archetype="None";
 	}
 	else if(p_level==1){
 		level=1;
+		archetype="None";
 	}
 	else{
 		level=1;
+		archetype="None";
 	}
 }
 
