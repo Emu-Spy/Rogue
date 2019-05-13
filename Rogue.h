@@ -58,4 +58,5 @@ class Rogue{
 		void changeStat(int index, int newStat);
 		void statsPrint();
 		void addProficiency(int skill);
+		void addRacialBonuses();
 };
