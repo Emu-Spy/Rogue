@@ -68,7 +68,7 @@ int main()
 	cout<< "And their age?"<<endl;
 	cin>>things;
 	r.changeAge(things);
-	cout<<"And their race?"<<endl;
+	cout<<"And their race? (Dwarf, Elf, Halfling, Human)"<<endl;
 	cin>>stuff;
 	r.changeRace(stuff);
 	//once the returnProficiencies method is done, add some code here to change racial proficiencies.
